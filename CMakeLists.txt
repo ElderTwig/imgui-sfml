@@ -37,7 +37,7 @@ if (IMGUI_SFML_FIND_SFML)
 	endif()
 	find_package(SFML 2.5 COMPONENTS graphics system window)
 
-	if(NOT SFML_FOUND)
+	if(NOT SFML_FOUND AND NOT TARGET sfml-graphics)
     message(FATAL_ERROR "SFML 2 directory not found. Set SFML_DIR to directory where SFML was built (or one which ccontains SFMLConfig.cmake)")
 	endif()
 endif()
