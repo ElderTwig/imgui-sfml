@@ -35,7 +35,7 @@ if (IMGUI_SFML_FIND_SFML)
 	if (NOT BUILD_SHARED_LIBS)
 		set(SFML_STATIC_LIBRARIES ON)
 	endif()
-	find_package(SFML 2.5 COMPONENTS graphics system window)
+	find_package(SFML 2.5 COMPONENTS graphics system window QUIET)
 
 	if(NOT SFML_FOUND AND NOT TARGET sfml-graphics)
     message(FATAL_ERROR "SFML 2 directory not found. Set SFML_DIR to directory where SFML was built (or one which ccontains SFMLConfig.cmake)")
